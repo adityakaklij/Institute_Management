@@ -11,8 +11,18 @@ function VerifyDetails() {
     const [data, setData]= useState()
 
     const getDetails = async()=>{
+      
       const getData = await contractInstantce.setStudent(data)
-      console.log(getData);
+      if (getData === ''){
+        console.log("No data found")
+      }
+      else{
+
+        const tokenMetada = await fetch(getData)
+        const jsonData = await tokenMetada.json()
+        let fetchedStudentId = await jsonData.StudentId ;
+        alert("Student is verified")
+      }
     }
 
     const details = (e) =>{
@@ -25,7 +35,7 @@ function VerifyDetails() {
         <h2>Enter Student's detail to Verify</h2>
         <input type="text" onChange={details} placeholder="Enter student's ID" />
 
-        <button onChange={getDetails}>Get Details</button>
+        <button onClick={getDetails}>Get Details</button>
     </>
   )
 }

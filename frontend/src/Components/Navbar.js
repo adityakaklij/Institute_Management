@@ -1,7 +1,8 @@
-import React, { useState , useEffect } from 'react'
+import React, { useState , useEffect} from 'react'
 import { ethers } from 'ethers';
 import "../App.css"
 import '../CSS/Navbar.css'
+import { Link } from 'react-router-dom';
 
 
 export default function Navbar() {
@@ -39,13 +40,16 @@ export default function Navbar() {
                 
                     <li className="nav-item">
                         <a className="nav-link active" aria-current="page" href="/Home">Home</a>
+                        <link rel="stylesheet" href="/Home" />
+                        
                     </li>
 
                     <li className="nav-item">
                         <a className="nav-link" href="/CreateSBT">CreateSBT</a>
+                        {/* <Link className="nav-link" to="/CreateSBT">CreateSBT</Link> */}
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="/ChangeInsitute">ChangeInstitute</a>
+                        <a className="nav-link" href="/ChangeInstitute">ChangeInstitute</a>
                     </li>
 
                     <li className="nav-item">

@@ -50,34 +50,34 @@ function App() {
         <div className="App">
           <p> Connected as : {account}</p>
 
-          <HashRouter basename='/'>
+          <Router basename='/'>
           <div className="App">
             <Navbar/>
 
           <Switch>
 
-              <Route exact path="/">
-                  <Home/>
+              <Route exact path="/" component={Home}>
+                  {/* <Home/> */}
               </Route>
 
-              <Route exact path="/Home">
-                  <Home/>
+              <Route exact path="/Home" component={Home}>
+                  {/* <Home/> */}
               </Route>
 
-              <Route exact path="/CreateSBT">
-                  <CreateSBT/>
+              <Route  path="/CreateSBT" component={CreateSBT}>
+                  {/* <CreateSBT/> */}
               </Route>
 
-              <Route exact path="/ChangeInsitute">
-                  <ChangeInstitute/>
+              <Route  path="/ChangeInstitute" component={ChangeInstitute}>
+                  {/* <ChangeInstitute/> */}
               </Route>
 
-              <Route exact path="/OnboardStudent">
-                  <OnboardStudent/>
+              <Route  path="/OnboardStudent" component={OnboardStudent}> 
+                  {/* <OnboardStudent/> */}
               </Route>
 
-              <Route exact path="/VerifyDetails">
-                  <VerifyDetails/>
+              <Route  path="/VerifyDetails" component={VerifyDetails}>
+                  {/* <VerifyDetails/> */}
               </Route>
 
             </Switch>
@@ -89,7 +89,7 @@ function App() {
 
 
           </div>
-          </HashRouter>
+          </Router>
 
         </div>
       )
