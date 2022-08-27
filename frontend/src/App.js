@@ -10,6 +10,8 @@ import ChangeInstitute from './Components/ChangeInstitute';
 import OnboardStudent from './Components/OnboardStudent';
 import VerifyDetails from './Components/VerifyDetails';
 
+import UAuth from '@uauth/js'
+
 
 function App() {
   const [isWalletInstalled, setIsWalletInstalled] = useState(false);
@@ -33,11 +35,24 @@ function App() {
         })
         
       }
+      const uauth = new UAuth({
+        
+        clientID: "807aa643-0795-4780-8fe6-c251bf762723",
+        redirectUri: "http://localhost:3000",
+        scope: "openid wallet"
+      })  
+
+      const loginFun =async ()=>{
+        const authorization = await uauth.loginWithPopup();
+        console.log(authorization)
+      }
 
     if(account === null){
       return(
         <div className="App">{
-          isWalletInstalled? ( <button className='connectBtn' onClick={connectWallet}> Connect </button> )  : (
+          isWalletInstalled ? (<> <button className='connectBtn' onClick={connectWallet}> Connect </button> 
+              <button onClick={loginFun}>Login with Unstoppable</button>
+          </>)  : (
             <p>Install Metamask Wallet</p>
           )
         }
@@ -51,16 +66,17 @@ function App() {
           <p> Connected as : {account}</p>
 
           <HashRouter basename='/'>
+          {/* <HashRouter > */}
           <div className="App">
             <Navbar/>
 
           <Switch>
 
-              <Route exact path="/" component={Home}>
+              <Route exact path="/Home" component={Home}>
                   {/* <Home/> */}
               </Route>
 
-              <Route  path="/OnboardStudent" component={OnboardStudent}> 
+              <Route exact path="/OnboardStudent" component={OnboardStudent}> 
                   {/* <OnboardStudent/> */}
               </Route>
 

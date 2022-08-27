@@ -45,19 +45,19 @@ export default function Navbar() {
                     </li>
 
                     <li className="nav-item">
-                        <a className="nav-link" href="/CreateSBT">CreateSBT</a>
+                        <a className="nav-link" href="#/CreateSBT">CreateSBT</a>
                         {/* <Link className="nav-link" to="/CreateSBT">CreateSBT</Link> */}
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="/ChangeInstitute">ChangeInstitute</a>
+                        <a className="nav-link" href="#/ChangeInstitute">ChangeInstitute</a>
                     </li>
 
                     <li className="nav-item">
-                        <a className="nav-link" href="/OnboardStudent">OnboardStudent</a>
+                        <a className="nav-link" href="#/OnboardStudent">OnboardStudent</a>
                     </li>
 
                     <li className="nav-item">
-                        <a className="nav-link" href="/VerifyDetails">VerifyDetails</a>
+                        <a className="nav-link" href="#/VerifyDetails">VerifyDetails</a>
                     </li>
                         
                     {/* <li lassName='nav-item1'>
