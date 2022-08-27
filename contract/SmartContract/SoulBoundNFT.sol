@@ -18,6 +18,7 @@ contract SoulBoundNFT is ERC721, ERC721URIStorage, Ownable {
 
     function safeMint(address to, string memory uri) public onlyOwner {
 
+        require(bytes(setStudent[to]).length != 0, "Student is not yet registered yet");
         uint256 tokenId = _tokenIdCounter.current();
         _tokenIdCounter.increment();
         _safeMint(to, tokenId);
@@ -58,4 +59,12 @@ contract SoulBoundNFT is ERC721, ERC721URIStorage, Ownable {
     {
         return super.tokenURI(tokenId);
     }
+
+    // Address to onboard Student.
+    mapping(address => string) public setStudent;
+
+    function onBoardUser( address _add, string memory _str) public onlyOwner {
+        setStudent[_add] = _str;
+    }
+
 }

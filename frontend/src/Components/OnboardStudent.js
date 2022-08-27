@@ -64,15 +64,15 @@ function OnboardStudent() {
     
         try {
             const metaData = await nftStorage.store({
-
-                StudentId:{stWallet},
-                name: {name},
+                name:inputFile.name,
+                description: name,
+                StudentId:stWallet,
                 age:{Age},
                 DOB:{DOB},
                 OnBoard:{OnBoard},
                 PerAddress:{PerAddress},
                 Data:{Data1},
-                image:file
+                image:inputFile
                 
             });
     
@@ -102,9 +102,9 @@ function OnboardStudent() {
     
       const MetaTrx = async(metaData) =>{
         // It's working properly.
-            const mintProfile = await contractInstantce.safeMint(toAddress,getIPFSGatewayURL(metaData.url));
+            const mintProfile = await contractInstantce.onBoardUser(stWallet,getIPFSGatewayURL(metaData.url));
             await mintProfile.wait()
-            window.alert("Profile Image uploaded :)")
+            window.alert("Student onBoarded:)")
       }
       const mintNFTToken = async(event , uploadedFile) =>{
         event.preventDefault()
@@ -147,6 +147,11 @@ function OnboardStudent() {
     </form>
 
     <button onClick={mintNFTToken}>Onboard student</button>
+
+            <label className='label1' htmlFor="chooseFile"> Upload Profile Img
+                <input type="file" id='chooseFile' onChange={handleFileUpload}/>
+            </label>
+
     </div>
   )
 }
