@@ -28,10 +28,12 @@ export default function Navbar() {
         {/* <nav className="navbar navbar-expand-lg navbar-dark bg-dark"> */}
         <nav className="navbar navbar-expand-lg  ">
             <div className="container-fluid">
+
                 {/* <a className="navbar-brand" href="/">Navbar</a> */}
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
-                </button>
+                {/* <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon">Hello </span>
+                </button> */}
+
                 <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav ml-auto mb-2 mb-lg-0">
                 
@@ -40,13 +42,24 @@ export default function Navbar() {
                     </li>
 
                     <li className="nav-item">
-                        <a className="nav-link" href="/Mint">Mint</a>
+                        <a className="nav-link" href="/CreateSBT">CreateSBT</a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link" href="/ChangeInsitute">ChangeInstitute</a>
+                    </li>
+
+                    <li className="nav-item">
+                        <a className="nav-link" href="/OnboardStudent">OnboardStudent</a>
+                    </li>
+
+                    <li className="nav-item">
+                        <a className="nav-link" href="/VerifyDetails">VerifyDetails</a>
                     </li>
                         
-                    <li className='nav-item1'>
+                    {/* <li lassName='nav-item1'>
                         <button className="connectBtn " onClick={Connect}>{connectIs}</button>
                             
-                    </li>
+                    </li> */}
                 </ul>
 
                         
