@@ -37,7 +37,7 @@ function App() {
     if(account === null){
       return(
         <div className="App">{
-          isWalletInstalled? (<button className='connectBtn' onClick={connectWallet}> Connect </button>) : (
+          isWalletInstalled? ( <button className='connectBtn' onClick={connectWallet}> Connect </button> )  : (
             <p>Install Metamask Wallet</p>
           )
         }
@@ -50,7 +50,7 @@ function App() {
         <div className="App">
           <p> Connected as : {account}</p>
 
-          <HashRouter basename='/'>
+          <Router basename='/'>
           <div className="App">
             <Navbar/>
 
@@ -58,6 +58,10 @@ function App() {
 
               <Route exact path="/" component={Home}>
                   {/* <Home/> */}
+              </Route>
+
+              <Route  path="/OnboardStudent" component={OnboardStudent}> 
+                  {/* <OnboardStudent/> */}
               </Route>
 
               <Route exact path="/Home" component={Home}>
@@ -70,10 +74,6 @@ function App() {
 
               <Route  path="/ChangeInstitute" component={ChangeInstitute}>
                   {/* <ChangeInstitute/> */}
-              </Route>
-
-              <Route  path="/OnboardStudent" component={OnboardStudent}> 
-                  {/* <OnboardStudent/> */}
               </Route>
 
               <Route  path="/VerifyDetails" component={VerifyDetails}>
@@ -89,7 +89,7 @@ function App() {
 
 
           </div>
-          </HashRouter>
+          </Router>
 
         </div>
       )

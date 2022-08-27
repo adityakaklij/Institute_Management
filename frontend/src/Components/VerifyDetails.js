@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { SBTABI, SBTAddress } from '../Constants/SBTData';
 import {ethers} from 'ethers'
+import '../CSS/VerifyDetails.css'
 
 function VerifyDetails() {
 
@@ -33,9 +34,12 @@ function VerifyDetails() {
     <>
 
         <h2>Enter Student's detail to Verify</h2>
-        <input type="text" onChange={details} placeholder="Enter student's ID" />
-
-        <button onClick={getDetails}>Get Details</button>
+        
+        <div className="verifyDiv">
+            <input type="text" className='verifyStdInput' onChange={details} placeholder="Enter student's ID" />
+            <br />
+            <button className='veryFyDetailBtn' onClick={getDetails}>Get Details</button>
+        </div>
     </>
   )
 }

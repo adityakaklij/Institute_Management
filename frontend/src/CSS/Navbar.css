@@ -39,12 +39,12 @@
   }
   
   .nav-item{
-    display: flex;
-    align-items: right;
+    display: inline;
+    align-items: left;
   }
   
   .navbar{
-    color: red;
+    color: rgb(58, 225, 255);
     /* background-color: #071a5f; */
     text-emphasis-color: red; 
   }
@@ -65,11 +65,14 @@
   }
   
   .connectBtn{
-    background-color: rgb(232, 0, 0);
-    color: aliceblue;
+    background-color: rgb(62, 244, 226);
+    margin-top: 25%;
+    color: rgb(0, 0, 0);
     font-weight: bold;
     padding: 6px 15px;
-    border-radius: 25px;
+    border-radius: 15px;
+    border: 0.2px solid gray;
+    font-size: 1.4em;
   }
   
   .mintBtn:hover{

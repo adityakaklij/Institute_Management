@@ -3,6 +3,7 @@ import { ethers } from 'ethers'
 import { SBTABI, SBTAddress } from '../Constants/SBTData';
 import {NFTStorage} from 'nft.storage'
 import file from './file.txt'
+import '../CSS/OnBoardStudent.css'
 
 
 function OnboardStudent() {
@@ -113,44 +114,45 @@ function OnboardStudent() {
       }
   return (
     <div>
-        <form>
+        <form className='inputFormOnboard'> 
             <label>Wallet Address-:
-                <input type="text" onChange={walletAddress}/>
+                <input type="text" className='onBoardInput' onChange={walletAddress}/>
             </label>
 
             <label>Student's name:
-                <input type="text" onChange={setTheName}/>
+                <input type="text" className='onBoardInput' onChange={setTheName}/>
             </label>
 
-            <label>Age:
-                <input type="text" onChange={setThesAge}/>
+            <label>Age:                                                               
+                <input type="text" className='onBoardInput' onChange={setThesAge}/>
             </label>
-            <br />
+            {/* <br /> */}
 
             <label>DOB:
-                <input type="text" onChange={setTheDOB}/>
+                <input type="text" className='onBoardInput' onChange={setTheDOB}/>
             </label>
 
             <label>OnBoard Course:
-                <input type="text"onChange={setTheOnBoard} />
+                <input type="text" className='onBoardInput' onChange={setTheOnBoard} />
             </label>
-            <br />
+            {/* <br /> */}
 
             <label>Permanant Address:
-                <input type="text" onChange={setTheAddress}/>
+                <input type="text" className='onBoardInput' onChange={setTheAddress}/>
             </label>
 
             <label>Data1:
-            <input type="text" onChange={setTheData1}/>
+            <input type="text" className='onBoardInput' onChange={setTheData1}/>
             </label>
-            <br />
+            {/* <br /> */}
     </form>
 
-    <button onClick={mintNFTToken}>Onboard student</button>
-
-            <label className='label1' htmlFor="chooseFile"> Upload Profile Img
+            <label className='label1' htmlFor="chooseFile"> Upload student Img
                 <input type="file" id='chooseFile' onChange={handleFileUpload}/>
             </label>
+
+            <br />
+            <button onClick={mintNFTToken} className="onBoardStdBtn" >Onboard student</button>
 
     </div>
   )

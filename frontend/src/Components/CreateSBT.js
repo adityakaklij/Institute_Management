@@ -2,6 +2,8 @@ import { ethers } from 'ethers';
 import React, { useState } from 'react'
 import { SBTABI, SBTAddress } from '../Constants/SBTData';
 import {NFTStorage} from 'nft.storage'
+import '../CSS/CreateSBT.css'
+
 
 function CreateSBT() {
     // Address from the usere where NFT/Marksheed need to send
@@ -86,18 +88,18 @@ const previewNFT = (metaData) =>{
 // Final popUp for the NFT
 
     return (
-    <>
-        <h1>From the SBT</h1>
-        <input type="text"placeholder='Enter Wallet address' onChange={getAddress} />
+    <div className='SBTBody'>
+        <h1>Send Marksheet as SBT</h1>
+        <input type="text" className='getAddressInput' placeholder='Enter Wallet address' onChange={getAddress} />
         {/* <button onClick={getAdd}>get the Address</button> */}
 
         <form className='form'>
               <label className='label1' htmlFor="chooseFile"> Upload Profile Img
-              <input type="file" id='chooseFile' onChange={handleFileUpload}/>
+              <input className='fileUpload' type="file" id='chooseFile' onChange={handleFileUpload}/>
               </label>
         </form>
-        <button className='mintBtn' onClick={mintNFTToken}>Send Marksheeet</button>
-    </>
+        <button className='SendMarksheet' onClick={mintNFTToken}>Send Marksheeet</button>
+    </div>
   )
 }
 

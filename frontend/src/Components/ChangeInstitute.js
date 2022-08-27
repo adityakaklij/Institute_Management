@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { ethers } from 'ethers';
 import { SBTABI, SBTAddress } from '../Constants/SBTData';
+import '../CSS/ChangeInstitute.css'
 
 
 function ChangeInstitute() {
@@ -23,8 +24,13 @@ function ChangeInstitute() {
     return (
     <>
         <h2>Transfer the student</h2>
-        <input type="text" onChange={setUserAddress} placeholder='Put the address' />
-        <button onClick={changeUser}>Transfer Student</button>
+
+        <div className="changeInstDiv">
+            <input type="text" className='transferStudentIn' onChange={setUserAddress} placeholder='Put the address' />
+            <br />
+
+            <button className='transferStdBtn' onClick={changeUser}>Transfer Student</button>
+            </div>
     </>
   )
 }
