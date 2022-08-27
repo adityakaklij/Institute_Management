@@ -50,7 +50,7 @@ function App() {
         <div className="App">
           <p> Connected as : {account}</p>
 
-          <Router basename='/'>
+          <HashRouter basename='/'>
           <div className="App">
             <Navbar/>
 
@@ -89,7 +89,7 @@ function App() {
 
 
           </div>
-          </Router>
+          </HashRouter>
 
         </div>
       )
