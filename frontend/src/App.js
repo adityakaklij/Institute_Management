@@ -4,7 +4,7 @@ import Home from './Components/Home';
 import Footer from './Components/Footer';
 import { useState, useEffect } from 'react';
 
-import { BrowserRouter as Router, Switch, Route,} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, HashRouter,} from "react-router-dom";
 import CreateSBT from './Components/CreateSBT';
 import ChangeInstitute from './Components/ChangeInstitute';
 import OnboardStudent from './Components/OnboardStudent';
@@ -20,7 +20,7 @@ function App() {
   useEffect( () =>{
     // if(window.ethereum){
       setIsWalletInstalled(true);
-      // connectWallet()
+      connectWallet()
     // }
   }, []);
 
@@ -50,7 +50,7 @@ function App() {
         <div className="App">
           <p> Connected as : {account}</p>
 
-          <Router basename='/'>
+          <HashRouter basename='/'>
           <div className="App">
             <Navbar/>
 
@@ -89,7 +89,7 @@ function App() {
 
 
           </div>
-          </Router>
+          </HashRouter>
 
         </div>
       )
