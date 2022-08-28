@@ -39,8 +39,8 @@ export default function Navbar() {
                 <ul className="navbar-nav ml-auto mb-2 mb-lg-0">
                 
                     <li className="nav-item">
-                        <a className="nav-link active" aria-current="page" href="/Home">Home</a>
-                        <link rel="stylesheet" href="/Home" />
+                        <a className="nav-link active" aria-current="page" href="/#/">Home</a>
+                        {/* <link rel="stylesheet" href="/Home" /> */}
                         
                     </li>
 

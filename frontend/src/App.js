@@ -22,7 +22,7 @@ function App() {
   useEffect( () =>{
     // if(window.ethereum){
       setIsWalletInstalled(true);
-      connectWallet()
+      // connectWallet()
     // }
   }, []);
 
@@ -44,14 +44,16 @@ function App() {
 
       const loginFun =async ()=>{
         const authorization = await uauth.loginWithPopup();
-        console.log(authorization)
+        // console.log(authorization)
+        connectWallet()
       }
 
     if(account === null){
       return(
         <div className="App">{
-          isWalletInstalled ? (<> <button className='connectBtn' onClick={connectWallet}> Connect </button> 
-              <button onClick={loginFun}>Login with Unstoppable</button>
+          isWalletInstalled ? (<> 
+          {/* <button className='connectBtn' onClick={connectWallet}> Connect </button>  */}
+              <button className='connectBtn' onClick={loginFun}>Login with Unstoppable</button>
           </>)  : (
             <p>Install Metamask Wallet</p>
           )
@@ -65,7 +67,7 @@ function App() {
         <div className="App">
           <p> Connected as : {account}</p>
 
-          <HashRouter basename='/'>
+          <Router basename='/'>
           {/* <HashRouter > */}
           <div className="App">
             <Navbar/>
@@ -78,10 +80,6 @@ function App() {
 
               <Route exact path="/OnboardStudent" component={OnboardStudent}> 
                   {/* <OnboardStudent/> */}
-              </Route>
-
-              <Route exact path="/Home" component={Home}>
-                  {/* <Home/> */}
               </Route>
 
               <Route  path="/CreateSBT" component={CreateSBT}>
@@ -105,7 +103,7 @@ function App() {
 
 
           </div>
-          </HashRouter>
+          </Router>
 
         </div>
       )
