@@ -78,3 +78,9 @@
   .mintBtn:hover{
     background-color: rgb(255, 82, 82);
   }
+
+  .navbar-expand-lg .navbar-collapse {
+    display: flex!important;
+    flex-basis: auto;
+    background-color: gainsboro;
+}
