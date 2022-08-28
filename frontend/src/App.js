@@ -38,7 +38,8 @@ function App() {
       const uauth = new UAuth({
         
         clientID: "b4a23376-ada3-4068-acc9-43d06c5744ca",
-        redirectUri: "https://institute-management-0npnyg.spheron.app/",
+        // redirectUri: "https://institute-management-0npnyg.spheron.app/",
+        redirectUri: "https://localhost:3000",
         scope: "openid wallet"
       })  
 
@@ -52,8 +53,8 @@ function App() {
       return(
         <div className="App">{
           isWalletInstalled ? (<> 
-          {/* <button className='connectBtn' onClick={connectWallet}> Connect </button>  */}
-              <button className='connectBtn' onClick={loginFun}>Login with Unstoppable</button>
+          <button className='connectBtn' onClick={connectWallet}> Connect </button> 
+              {/* <button className='connectBtn' onClick={loginFun}>Login with Unstoppable</button> */}
           </>)  : (
             <p>Install Metamask Wallet</p>
           )
@@ -67,7 +68,7 @@ function App() {
         <div className="App">
           <p> Connected as : {account}</p>
 
-          <Router basename='/'>
+          <HashRouter basename='/'>
           {/* <HashRouter > */}
           <div className="App">
             <Navbar/>
@@ -103,7 +104,7 @@ function App() {
 
 
           </div>
-          </Router>
+          </HashRouter>
 
         </div>
       )

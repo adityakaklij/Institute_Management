@@ -115,7 +115,7 @@ function OnboardStudent() {
   return (
     <div>
         <form className='inputFormOnboard'> 
-            <label>Wallet Address-:
+            <label>Wallet Address:
                 <input type="text" className='onBoardInput' onChange={walletAddress}/>
             </label>
 
@@ -141,7 +141,7 @@ function OnboardStudent() {
                 <input type="text" className='onBoardInput' onChange={setTheAddress}/>
             </label>
 
-            <label>Data1:
+            <label>Other information:
             <input type="text" className='onBoardInput' onChange={setTheData1}/>
             </label>
             {/* <br /> */}

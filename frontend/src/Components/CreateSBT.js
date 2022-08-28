@@ -89,12 +89,12 @@ const previewNFT = (metaData) =>{
 
     return (
     <div className='SBTBody'>
-        <h1>Send Marksheet as SBT</h1>
+        <h1 className='send'>Send Marksheet as SBT</h1>
         <input type="text" className='getAddressInput' placeholder='Enter Wallet address' onChange={getAddress} />
         {/* <button onClick={getAdd}>get the Address</button> */}
 
         <form className='form'>
-              <label className='label1' htmlFor="chooseFile"> Upload Profile Img
+              <label className='label1' htmlFor="chooseFile">Profile Image
               <input className='fileUpload' type="file" id='chooseFile' onChange={handleFileUpload}/>
               </label>
         </form>

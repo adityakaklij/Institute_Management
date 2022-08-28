@@ -1,13 +1,13 @@
 .inputFormOnboard{
-    padding-top: 50px;
-    display: inline-block;
-    align-items: left;
-    text-align: left;
-    padding-left: 50px;
+    padding-top: 30px;
+    display: inline-flexbox;
+    align-items: center;
+    text-align: center;
+    padding-left: 80px;
 }
 
 .inputFormOnboard label{
-    width: 100%;
+    width: 52%;
 }
 
 .inputFormOnboard input{
@@ -32,9 +32,13 @@
     border-radius: 15px;
     border: 0.5px solid grey;
     padding: 15px;
+    width: 27%;
+    margin-bottom: 10px;
+    align-items: center;
 }
 
 .label1{
-    padding-top: 30px;
+    padding-left: 165px;
+    padding-top:20px;
 }
   

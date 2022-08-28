@@ -3,10 +3,14 @@
     margin: 10px,10px;
 
 }
+.send{
+    color: aqua;
+}
 
 .SBTBody button{
+    width: 18%;
     padding: 10px;
-    margin-top: 25px;
+    margin-top: 35px;
 }
 
 .getAddressInput{
@@ -16,6 +20,8 @@
     border-radius: 15px;
     border: 0.5px solid gray;
     padding: 15px;
+    margin-top: 20px;
+    width: 28%;
 }
 
 .SBTBody form{
@@ -26,4 +32,9 @@
     background-color: #00ffc8;
     border-radius: 15px ;
     border: 0.5px solid grey;
+}
+
+.label1{
+    align-items: center;
+    margin-right: 50px;
 }

@@ -23,7 +23,7 @@ function ChangeInstitute() {
   
     return (
     <>
-        <h2>Transfer the student</h2>
+        <h2 className='trans'>Transfer the student</h2>
 
         <div className="changeInstDiv">
             <input type="text" className='transferStudentIn' onChange={setUserAddress} placeholder='Put the address' />
