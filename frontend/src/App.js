@@ -37,8 +37,8 @@ function App() {
       }
       const uauth = new UAuth({
         
-        clientID: "807aa643-0795-4780-8fe6-c251bf762723",
-        redirectUri: "http://localhost:3000",
+        clientID: "b4a23376-ada3-4068-acc9-43d06c5744ca",
+        redirectUri: "https://institute-management-0npnyg.spheron.app/",
         scope: "openid wallet"
       })  
 
