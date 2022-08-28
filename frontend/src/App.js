@@ -22,7 +22,7 @@ function App() {
   useEffect( () =>{
     // if(window.ethereum){
       setIsWalletInstalled(true);
-      // connectWallet()
+      connectWallet()
     // }
   }, []);
 
@@ -53,8 +53,8 @@ function App() {
       return(
         <div className="App">{
           isWalletInstalled ? (<> 
-          <button className='connectBtn' onClick={connectWallet}> Connect </button> 
-              {/* <button className='connectBtn' onClick={loginFun}>Login with Unstoppable</button> */}
+          {/* <button className='connectBtn' onClick={connectWallet}> Connect </button>  */}
+              <button className='connectBtn' onClick={loginFun}>Login with Unstoppable</button>
           </>)  : (
             <p>Install Metamask Wallet</p>
           )
@@ -75,6 +75,9 @@ function App() {
 
           <Switch>
 
+              <Route exact path="/#/" component={Home}>
+                  {/* <Home/> */}
+              </Route>
               <Route exact path="/Home" component={Home}>
                   {/* <Home/> */}
               </Route>

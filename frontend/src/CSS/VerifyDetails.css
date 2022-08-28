@@ -4,16 +4,28 @@
     border-radius: 15px;
     border: 0.5px solid gray;
     padding: 15px;
+    width: 28%;
+    margin-top: 10px;
+}
+
+.stud{
+    padding-top: 50px;
 }
 
 .veryFyDetailBtn{
-    margin-top: 30px;
+    margin-top: 40px;
     background-color: #00ffc8;
     border-radius: 15px;
     border: 0.5px solid grey;
     padding: 15px;
+    width: 28%;
+    text-align: center;
 }
 
 .verifyDiv{
     padding-top: 110px;
+}
+
+.h2{
+    padding-bottom: 10px;
 }
